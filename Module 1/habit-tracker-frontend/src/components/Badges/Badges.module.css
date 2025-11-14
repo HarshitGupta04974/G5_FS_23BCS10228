@@ -1,0 +1,111 @@
+.badgesContainer {
+  /* This is the main card container */
+  background: #1e2d2a;
+  border: 1px solid #30423e;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+/* Main title for the tab */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 0.75rem;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* This creates the responsive grid for the badges */
+.badgeGrid {
+  display: grid;
+  /* Create 3 columns, each of equal size */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* --- Individual Badge Card Styling --- */
+
+/* This is the "locked" state (default) */
+.badgeItem {
+  background: #101d1a; /* Darker inner card */
+  border: 1px solid #30423e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  /* Start by being grayed out */
+  opacity: 0.5; 
+  filter: grayscale(80%);
+}
+
+/* This is the "unlocked" state */
+.unlocked {
+  opacity: 1;
+  filter: grayscale(0%);
+  border-color: #4ade80; /* Green border for unlocked */
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.2);
+}
+
+/* --- Badge Card Content --- */
+
+.badgeIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #a0a0a0; /* Default locked color */
+}
+
+.badgeTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c9c9c9; /* Default locked color */
+  margin: 0 0 0.5rem;
+}
+
+.badgeDescription {
+  font-size: 0.9rem;
+  color: #808080; /* Default locked color */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Unlocked Content Colors --- */
+/* When a badge has the .unlocked class, make its contents colorful */
+
+.unlocked .badgeIcon {
+  color: #4ade80; /* Green */
+}
+
+/* Example: Different colors for different icons (optional) */
+.unlocked .badgeIcon svg[data-icon="fire"] {
+  color: #f97316; /* Orange */
+}
+.unlocked .badgeIcon svg[data-icon="star"] {
+  color: #facc15; /* Yellow */
+}
+.unlocked .badgeIcon svg[data-icon="trophy"] {
+  color: #eab308; /* Gold */
+}
+
+
+.unlocked .badgeTitle {
+  color: #ffffff; /* Bright white */
+}
+
+.unlocked .badgeDescription {
+  color: #b3b3b3;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .badgeGrid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .badgeGrid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}

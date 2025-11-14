@@ -1,0 +1,192 @@
+/* This container creates the vertical gap between cards */
+.myHabitsContainer {
+  display: grid;
+  gap: 1.5rem; 
+}
+
+/* This is the "Add a new habit" card */
+.addHabitCard {
+  background: #1e2d2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Form layout inside the card */
+.addHabitCard form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.addInput {
+  flex: 1; /* Take up most of the space */
+  min-width: 200px; /* Allow shrinking */
+  padding: 0.85rem 1rem;
+  background: #101d1a;
+  border: 1px solid #30423e;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.addInput:focus {
+  outline: none;
+  border-color: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+}
+
+.xpInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b3b3b3;
+}
+.xpInput {
+  width: 60px;
+  padding: 0.85rem 0.5rem;
+  background: #101d1a;
+  border: 1px solid #30423e;
+  border-radius: 8px;
+  color: #ffffff;
+}
+.xpInput:focus {
+  outline: none;
+  border-color: #4ade80;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  background: linear-gradient(90deg, #4ade80, #3abf68);
+  color: #111827;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.addButton:hover {
+  opacity: 0.9;
+}
+
+/* --- Habit List Styling --- */
+.habitList {
+  /* This container is now a card itself */
+  background: #1e2d2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 1rem; /* Space between each habit item */
+}
+
+/* Heading for the list */
+.listTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 0.75rem;
+  margin: 0 0 0.5rem 0; /* Updated margins */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Each habit is its own card-like item now */
+.habitItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #101d1a; /* Slightly darker than the list card */
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #30423e;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.habitItem:hover {
+  border-color: #444;
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.habitInfo {
+  flex: 1; /* Take up all available space */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.habitName {
+  color: #ffffff;
+  font-weight: 600;
+}
+.habitStats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #b3b3b3;
+}
+.habitStreak, .habitXp {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+/* Make the streak fire icon pop */
+.habitStreak svg {
+  color: #f97316; /* Orange */
+}
+
+/* Buttons on the right */
+.completeButton, .deleteButton {
+  background: #30423e;
+  border: 1px solid #444;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.completeButton:hover {
+  background: #4ade80;
+  color: #111827;
+  border-color: #4ade80;
+}
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+}
+.deleteButton:hover {
+  background: #30423e;
+  color: #ef4444; /* Red */
+}
+
+.emptyMessage {
+  /* No card style needed, as it's inside the list card */
+  text-align: center;
+  color: #b3b3b3;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.error {
+  color: #ef4444;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* This is the class for the "Level Up" toast */
+.levelUpToast {
+  background: linear-gradient(90deg, #4ade80, #facc15);
+  color: #111827;
+  font-weight: bold;
+}

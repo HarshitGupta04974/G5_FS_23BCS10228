@@ -1,0 +1,48 @@
+/* Main container for the "Stats" tab */
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Base card style for charts */
+.chartCard {
+  background: #1e2d2a;
+  border: 1px solid #30423e;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+/* Main title for the tab */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 0.75rem;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Title for inside the chart card */
+.chartTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+/* Wrapper to ensure the chart is responsive */
+.chartWrapper {
+  width: 100%;
+  height: 300px; /* Set a fixed height for the chart */
+}
+
+/* Message shown if there is no data to chart */
+.noDataText {
+  text-align: center;
+  color: #a0a0a0;
+  font-style: italic;
+  padding: 2rem 0;
+}

@@ -1,0 +1,48 @@
+/* --- MAIN APP LAYOUT --- */
+.appContainer {
+  width: 100%;
+  max-width: 1100px; /* Max width for the content */
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem; /* Padding for top/sides/bottom */
+  display: flex;
+  flex-direction: column;
+  /* This creates the vertical spacing between sections */
+  gap: 2rem; 
+}
+
+/* --- MAIN CONTENT AREA --- */
+.mainContent {
+  width: 100%;
+}
+
+/* --- LOADING SPINNER STYLES --- */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Full viewport height */
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #30423e; /* Darker ring */
+  border-bottom-color: #4ade80; /* Green accent */
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

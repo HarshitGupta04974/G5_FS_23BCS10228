@@ -1,0 +1,122 @@
+.authContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .authForm {
+    background: #1e2d2a;
+    border: 1px solid #30423e;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem 3rem;
+    max-width: 450px;
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem;
+    text-align: center;
+  }
+  
+  .gradientText {
+    background: linear-gradient(90deg, #4ade80, #facc15);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #a0a0a0;
+    margin: 0 0 2rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .inputGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .inputGroup label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #c9c9c9;
+    margin-bottom: 0.5rem;
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: #101d1a;
+    border: 1px solid #30423e;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box; /* Fixes padding issue */
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .inputGroup input:focus {
+    outline: none;
+    border-color: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.85rem 1.75rem;
+    background: linear-gradient(90deg, #4ade80, #3abf68);
+    color: #111827;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(74, 222, 128, 0.2);
+  }
+  
+  .submitButton:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.3);
+  }
+  
+  .submitButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .toggleButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: none;
+    border: none;
+    color: #a0a0a0;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .toggleButton:hover {
+    color: #ffffff;
+  }
+  
+  .error {
+    background-color: #4d1d1d;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }

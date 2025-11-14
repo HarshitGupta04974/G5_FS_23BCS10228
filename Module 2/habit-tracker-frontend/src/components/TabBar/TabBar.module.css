@@ -1,0 +1,58 @@
+/* This is the main card container for the tabs */
+.tabBarContainer {
+  display: flex;
+  background: #1e2d2a; /* Dark card color */
+  border-radius: 12px;
+  padding: 0.5rem;
+  /* Shadow and border from requirements */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  gap: 0.5rem; /* Space between buttons */
+}
+
+.tabButton {
+  flex: 1; /* Make all buttons share space equally */
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px; /* Rounded corners for buttons */
+  
+  color: #b3b3b3; /* Muted text color */
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tabButton:hover {
+  background: #30423e; /* Darker hover */
+  color: #ffffff;
+}
+
+/* This style is applied to the active button */
+.active {
+  background: #30423e;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .tabBarContainer {
+    /* Allow scrolling on mobile if too many tabs */
+    overflow-x: auto; 
+    justify-content: flex-start;
+  }
+  .tabButton {
+    flex: 0 0 auto; /* Don't stretch buttons, let them be natural width */
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+}
